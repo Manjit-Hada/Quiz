@@ -12,8 +12,8 @@ import android.widget.RadioGroup;
 
 public class QuizActivity extends AppCompatActivity {
     private Button submitButton;
-    private int score;
-    private RadioGroup numOneRadioGroup;
+    private int score = 0;
+    private RadioGroup numOneRadioGroup, numTwoRadioGroup;
     private EditText editText;
     private CheckBox nit;
 
@@ -29,12 +29,21 @@ public class QuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (nit.isChecked() && nit.isChecked() && !nit.isChecked() && !nit.isChecked()){
-                    score +=1;
+                int firstAnswerId = numOneRadioGroup.getCheckedRadioButtonId();
+                if(firstAnswerId == R.id.Antoine) {
+                    score++;
                 }
 
+                int secondAnswerId = numTwoRadioGroup.getCheckedRadioButtonId();
+                if(secondAnswerId == R.id.rbDmitriMendeleev) {
+//                if (nit.isChecked()){
+                    score += 1;
+//                }
+                }
+
+
                 Intent intent= new Intent(QuizActivity.this, ScoreActivity.class);
-                intent.putExtra("Score", "6/10");
+                intent.putExtra("Score", score);
                 startActivity(intent);
             }
 
@@ -42,14 +51,17 @@ public class QuizActivity extends AppCompatActivity {
         });
 
         numOneRadioGroup= findViewById(R.id.num_one_radio_group);
+        numTwoRadioGroup= findViewById(R.id.num_two_radio_group);
         numOneRadioGroup.clearCheck();
-        numOneRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if (checkedId== R.id.Antoine)
-                    score +=1;
-            }
-        });
+        numTwoRadioGroup.clearCheck();
+//        numOneRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+//            @Override
+//            public void onCheckedChanged(RadioGroup group, int checkedId) {
+//                if (checkedId== R.id.Antoine)
+//                    score +=1;
+//
+//            }
+//        });
 
     }
 }

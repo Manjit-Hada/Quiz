@@ -5,12 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/image"
     tools:context=".QuizActivity">
     <!-- Question 1-->
 
     <TextView
         style="@style/questionStyle"
-        android:text="1. Who is honored as Father of Modern Chemistry?" />
+        android:text="1. Who is honored as Father of Modern Chemistry?"
+        android:textColor="#ffff"/>
 
     <RadioGroup
         android:id="@+id/num_one_radio_group"
@@ -20,87 +22,105 @@
             android:id="@+id/Antoine"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Antoine Lavoisier" />
+            android:text="Antoine Lavoisier"
+            android:textColor="#ffdeaa"/>
+
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Dmitri Mendeleev" />
+            android:text="Dmitri Mendeleev"
+            android:textColor="#ffdeaa"/>
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Dmitri Mendeleev" />
+            android:text="Dmitri Mendeleev"
+            android:textColor="#ffdeaa"/>
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Dmitri Mendeleev" />
+            android:text="Dmitri Mendeleev"
+            android:textColor="#ffdeaa"/>
     </RadioGroup>
 
     <!-- Question 2-->
 
     <TextView
         style="@style/questionStyle"
-        android:text="2. Who invented periodic table?" />
+        android:text="2. Who invented periodic table?"
+        android:textColor="#ffff"/>
 
-    <RadioGroup style="@style/radio_group">
+    <RadioGroup style="@style/radio_group"
+        android:id="@+id/num_two_radio_group"
+        >
+
+        <RadioButton
+            android:id="@+id/rbDmitriMendeleev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dmitri Mendeleev"
+            android:textColor="#ffdeaa"/>
+
+        <RadioButton
+            android:id="@+id/rbNitrogen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nitrogen (78.08%)"
+            android:textColor="#ffdeaa"/>
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Dmitri Mendeleev" />
+            android:text="Nitrogen (78.08%)"
+            android:textColor="#ffdeaa"/>
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nitrogen (78.08%)" />
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Nitrogen (78.08%)" />
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Nitrogen (78.08%)" />
+            android:text="Nitrogen (78.08%)"
+            android:textColor="#ffdeaa"/>
     </RadioGroup>
 
 
     <!-- Question 3 -->
+
     <TextView
         style="@style/questionStyle"
-        android:text="3. Which is the most abundant gas in the earth's atmosphere?" />
+        android:text="In which country COVID-19 started?"
+        android:textColor="#ffff"/>
+
 
     <CheckBox
         android:id="@+id/nit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nitrogen (78.08%)" />
+        android:text="China"
+        android:textColor="#ffdeaa"/>
 
     <CheckBox
         android:id="@+id/Ni"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nitrogen " />
+        android:text="Italy"
+        android:textColor="#ffdeaa"/>
 
     <CheckBox
         android:id="@+id/N"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nitrogen" />
-
-    <CheckBox
-        android:id="@+id/Nitr"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Nitrogen)" />
+        android:text="UK"
+        android:textColor="#ffdeaa"/>
 
 
     <Button
         android:id="@+id/submit_button"
         android:layout_width="wrap_content"
-        android:layout_height="37dp"
-        android:text="Submit" />
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:textColor="#fff"
+        android:background="#4c6ca5"
+        />
+
 </LinearLayout>
